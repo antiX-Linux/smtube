@@ -1,0 +1,28 @@
+Source: smtube
+Section: video
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Alessio Treglia <alessio@debian.org>
+Build-Depends:
+ debhelper (>= 9~),
+ libqt5webkit5-dev,
+ qttools5-dev-tools,
+ qtscript5-dev,
+ zlib1g-dev
+Standards-Version: 3.9.6
+Homepage: http://smplayer.sourceforge.net/smtube.php
+Vcs-Git: git://anonscm.debian.org/pkg-multimedia/smtube.git
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-multimedia/smtube.git
+
+Package: smtube
+Architecture: any
+Depends:
+ smplayer | mplayer2 | mpv | mplayer | vlc | totem | gnome-mpv,
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: YouTube videos browser
+ SMTube is a stand-alone graphical application which allows one
+ to search and download Youtube videos. Although it is part of
+ the SMPlayer project, it can be used with any multimedia player
+ such as MPlayer, MPlayer2, VLC, Totem or Gnome-MPlayer.

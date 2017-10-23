@@ -1,0 +1,75 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ smtube (17.1.0-1) unstable; urgency=medium
+ .
+   * antiX build
+Author: anticapitalista <antix@operamail.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: 2017-02-05
+
+--- smtube-17.1.0.orig/OBS/Makefile
++++ smtube-17.1.0/OBS/Makefile
+@@ -3,8 +3,8 @@
+ 
+ PACKAGE = smtube
+ VERSION = 17.1.0
+-#DEPENDS = debhelper (>= 5.0.0), qtbase5-dev, qt5-qmake, qtscript5-dev, qttools5-dev-tools, qt5-default, libqt5webkit5-dev
+-DEPENDS = debhelper (>= 5.0.0), libqt4-dev, libqtwebkit-dev
++DEPENDS = debhelper (>= 5.0.0), qtbase5-dev, qt5-qmake, qtscript5-dev, qttools5-dev-tools, qt5-default, libqt5webkit5-dev
++#DEPENDS = debhelper (>= 5.0.0), libqt4-dev, libqtwebkit-dev
+ 
+ DSC_FILE = $(PACKAGE).dsc
+ DEBIAN_FILE = debian.tar.gz
+--- smtube-17.1.0.orig/debian-rvm/compat
++++ smtube-17.1.0/debian-rvm/compat
+@@ -1 +1 @@
+-5
++9
+--- smtube-17.1.0.orig/debian-rvm/control
++++ smtube-17.1.0/debian-rvm/control
+@@ -4,8 +4,8 @@ Priority: extra
+ Maintainer: Ricardo Villalba <rvm@users.sourceforge.net>
+ Standards-Version: 3.9.2
+ Homepage: http://smtube.sourceforge.net/
+-Build-Depends: debhelper (>= 5.0.0), libqt4-dev, libqtwebkit-dev
+-#Build-Depends: debhelper (>= 5.0.0), qtbase5-dev, qt5-qmake, qtscript5-dev, qttools5-dev-tools, qt5-default, libqt5webkit5-dev
++#Build-Depends: debhelper (>= 5.0.0), libqt4-dev, libqtwebkit-dev
++Build-Depends: debhelper (>= 5.0.0), qtbase5-dev, qt5-qmake, qtscript5-dev, qttools5-dev-tools, qt5-default, libqt5webkit5-dev
+ 
+ Package: smtube
+ Architecture: any
+--- smtube-17.1.0.orig/debian-rvm/rules
++++ smtube-17.1.0/debian-rvm/rules
+@@ -91,7 +91,7 @@ binary-arch: build install
+ 	dh_shlibdeps
+ 	dh_gencontrol
+ 	dh_md5sums
+-	dh_builddeb -- -Z lzma
++	dh_builddeb -- -Z xz
+ 
+ binary: binary-indep binary-arch
+ .PHONY: build clean binary-indep binary-arch binary install configure
+--- /dev/null
++++ smtube-17.1.0/src/svn_revision.h
+@@ -0,0 +1 @@
++#define SVN_REVISION "SVN-r0UNKNOWN"
+--- /dev/null
++++ smtube-17.1.0/svn_revision
+@@ -0,0 +1 @@
++SVN-r0UNKNOWN

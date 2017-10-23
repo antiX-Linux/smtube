@@ -1,0 +1,69 @@
+smtube (17.1.0-2) unstable; urgency=medium
+
+  * Changed gnome-mplayer to gnome-mpv
+
+ -- anticapitalista <antix@operamail.com>  Thu, 09 Mar 2017 19:42:29 +0200
+
+smtube (17.1.0-1) unstable; urgency=medium
+
+  * antiX build 
+
+ -- anticapitalista <antix@operamail.com>  Sun, 05 Feb 2017 23:49:59 +0200
+
+smtube (15.5.10-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release [May 2015] (Closes: #785142).
+  * Switch to QT5.
+  * Build-Depends:
+    - libqt4-dev (>= 4.3)
+    + libqt5webkit5-dev
+    + qttools5-dev-tools
+    + qtscript5-dev
+  * Added new "hardening.patch".
+  * rules: remove upstream Changelog, if empty.
+  * Updated Vcs-Browser URL.
+  * Standards-Version: 3.9.6.
+
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 19 May 2015 19:38:34 +1000
+
+smtube (14.8.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 11 Sep 2014 16:12:53 +0100
+
+smtube (2.1-2) unstable; urgency=medium
+
+  * Add mpv as optional dependency. (Closes: #752590)
+
+ -- Alessio Treglia <alessio@debian.org>  Fri, 11 Jul 2014 16:13:26 +0100
+
+smtube (2.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix VCS field. (Closes: #722434)
+  * Update copyright holders of debian/* files.
+  * Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Sun, 30 Mar 2014 19:03:04 +0100
+
+smtube (1.8-1) unstable; urgency=low
+
+  * Upload to unstable.
+  * New upstream release.
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 03 Oct 2013 17:16:56 +0100
+
+smtube (1.6-1) experimental; urgency=low
+
+  * New upstream release.
+  * Update debian/copyright.
+
+ -- Alessio Treglia <alessio@debian.org>  Sat, 13 Apr 2013 00:30:34 +0200
+
+smtube (1.5-1) experimental; urgency=low
+
+  * Initial release. (Closes: #700493)
+
+ -- Alessio Treglia <alessio@debian.org>  Wed, 13 Feb 2013 11:48:44 +0000
